@@ -7,7 +7,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import { Toast } from '@ionic-native/toast';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { IntroPage } from "../pages/intro/intro";
 import { LoginPage } from "../pages/login/login";
 import { LoginwebPage } from "../pages/loginweb/loginweb";
 import { MenuprincipalPage } from "../pages/menuprincipal/menuprincipal";
@@ -18,6 +18,7 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import firebase from 'firebase';
 
 //Plugins
 import { GooglePlus } from '@ionic-native/google-plus';
@@ -30,11 +31,12 @@ export const firebaseConfig = {
   storageBucket: "cucei-srg.appspot.com",
   messagingSenderId: "56958534713"
 };
+firebase.initializeApp(firebaseConfig);
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    IntroPage,
     LoginPage,
     LoginwebPage,
     MenuprincipalPage,
@@ -50,7 +52,7 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    IntroPage,
     LoginPage,
     LoginwebPage,
     MenuprincipalPage,

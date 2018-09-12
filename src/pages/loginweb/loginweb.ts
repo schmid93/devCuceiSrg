@@ -1,15 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { HomePage } from '../home/home';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
-import {AuthCredential} from '@firebase/auth-types';
-import { Platform } from 'ionic-angular';
-import { GooglePlus } from '@ionic-native/google-plus';
-import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import swal from 'sweetalert';
-import * as $ from 'jquery';
 
 @IonicPage()
 @Component({
@@ -19,11 +10,7 @@ import * as $ from 'jquery';
 export class LoginwebPage {
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams,
-              private googlePlus: GooglePlus,
-              private platform: Platform,
-              private alertCtrl: AlertController,
-              private afAuth: AngularFireAuth,) {
+              public navParams: NavParams) {
   }
 
 validation(){

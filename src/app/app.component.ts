@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { LoginPage } from "../pages/login/login";
-import { HomePage } from '../pages/home/home';
+import { IntroPage } from "../pages/intro/intro";
 import { LoginwebPage } from "../pages/loginweb/loginweb";
 import { MenuprincipalPage } from "../pages/menuprincipal/menuprincipal";
 import { FormreportemovilPage } from "../pages/formreportemovil/formreportemovil";
@@ -21,12 +20,12 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
       if (platform.is('cordova')) {
-        this.rootPage = LoginPage;
+        this.rootPage = IntroPage;
       } else {
         //this.rootPage = FormreportemovilPage;
-        this.rootPage = LoginPage;
+        //this.rootPage = IntroPage;
         //this.rootPage = MenuprincipalPage;
-        //this.rootPage = LoginwebPage;
+        this.rootPage = LoginwebPage;
       }
     });
   }

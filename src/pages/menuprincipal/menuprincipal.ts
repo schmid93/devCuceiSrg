@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the MenuprincipalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-menuprincipal',
@@ -15,11 +8,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MenuprincipalPage {
 
+  nombre: string;
+  email: string;
+  imagen: string;
+  mostrar:boolean;
+  dominio = "@alumnos.udg.mx";
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.nombre = this.navParams.get("nombre");
+    this.email = this.navParams.get("correo");
+    this.imagen = this.navParams.get("imagen");
+    this.validate();
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MenuprincipalPage');
+  validate(){
+    if (this.email.indexOf(this.dominio) != -1) {
+      return this.mostrar = false;
+    }else{
+      return this.mostrar = true;
+    }
   }
-
 }
+
+  

@@ -8,7 +8,7 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <div class="MenuMantenimiento" style="border-bottom: 1px solid white; padding-bottom: 2%;">
+        <div class="MenuMantenimiento" *ngIf="mostrar" style="border-bottom: 1px solid white; padding-bottom: 2%;">
           <button ion-button color="light" block outline style="border-radius: 7px 7px 7px 7px;">Menu Mantenimiento</button>
         </div>
         <div class="MenuSeguridad"  style="border-bottom: 1px solid white; padding-bottom: 2%;">
@@ -17,4 +17,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  <ion-icon ios="ios-close" md="md-close">Salir</ion-icon>
 </ion-content>
